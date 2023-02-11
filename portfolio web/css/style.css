@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Work+Sans:wght@400;500&display=swap');
+
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+font-family: 'Work Sans', sans-serif;
+}
+
+/* *******reuseable code and variables in css and pseudofunctions in css (dont repeat urself)
+flex and grid and may more */
+
+root{
+    --heading:rgb(0, 10, 45);
+    --para:rgb(124, 121, 121);
+    --para-tint: #e4e4e4;
+    --white: #fff;
+    --helper: #8490ff;
+    --helper-tint: #f3f4ff;
+    --bg:rgb(206, 206, 206);
+    --gradient: linear-gradient (0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
+    --gradientSupport: -webkit-linear-gradient(
+     0deg,
+    rgb(132 144 255)  0%,
+    rgb(98 189 252) 100%
+);
+    --shadow: 0px 0px 20px 0px  rgb(132 144 255 / 20%);
+}
+
+html{
+    font-size: 85.5%;
+}
+h1,h2,h3,h4{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+color:var(--heading);
+font-size:6rem;
+font-weight:600;
+}
+h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+p{
+    font-size: 1.7rem;
+
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+    color: black;
+}
+/* **************HEADER STYLE******************* */
+header{
+    padding: 0 1rem;
+    height: 5rem;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+ul{
+    display: flex;
+    gap: 4.8rem;
+}
+.navbar-link :link,
+.navbar-link :visited
+{
+display: inline-block;
+font-size: 1.4rem;
+font-weight: 500;
+color: black;
+}
+.navbar-link:hover{
+    color: aqua;
+}
+/* **********main section***************** */
+.info-one{
+    padding-top: 50px;
+    display: grid;
+    gap: 5rem ;
+    grid-template-columns: 2fr 2fr;
+}
+.info-title{
+    font-size: 1.7rem;
+}
+.info-one img{
+    width: 75%;
+    height: 613px;
+}
+    
+.data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding-left: 80px;
+}
+.photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.name
+{
+    font-size: 4rem;
+}
+.bio{
+    padding-bottom: 30px;
+}
+.btn{
+    padding: 10px;
+    color: white;
+    background-color: #080842c2;
+    transition: all 0.3s ease;
+    border-radius: 7px;
+}
+.btn:hover,.brn:active{
+    color: black;
+}
+
+/* ***************bio secto********** */
+.bio-img img{
+    width: 75%;
+    height: 400px;
+    box-shadow: -1rem -1rem 0 0 #080844c2;
+}
+.bio-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bio-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding-left: 80px;
+}
+.title::before{
+    content: "";
+    position: absolute;
+    top: 113%;
+    left: 64%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #080842c2;
+    border-radius: 50%;
+}
+.title::after{
+    content: "";
+    position: absolute;
+    top: 828px;
+    left: 64%;
+    min-width: 5rem;
+    height: 1.3px;
+    background-color: #080842c2;
+}
+.bio-data div{
+    display: flex;
+    flex-direction: column; 
+    padding: 10px 0px;
+}
+.bio-data span{
+    padding: 2px;
+}
+
+
+.class1,.class2,.class3,.class4,.class5{
+     width: 85%;
+    height: 5px;
+    background-color: rgb(212, 211, 211);
+}
+.class1::before{
+    content: "";
+    position: absolute;
+    top: 889px;
+    left: 839px;
+    width: 510px;
+    height: 3px;
+    background-color:#080844c2;
+}
+.class2::before{
+    content: "";
+    position: relative;
+    top: 951px;
+    left: 839px;
+    width: 510px;
+    height: 3px;
+    background-color:#080844c2;
+}
+/* potfolio section */
+
+.btns{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: 5rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 35px 0px;
+    /* padding-left: 80px; */
+}
+.grid-coloum-3{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    gap: 5rem;
+    padding: 0 90px;
+}
+.grid-img{
+    position: relative;
+    overflow: hidden;
+
+}
+.grid-img img{
+    width: 100%;
+    border-radius: 7px;
+}
+.grid-img .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background-color: #080844c2;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    transition: all 0.3s linear;
+    border-radius: 7px;
+}
+.grid-img:hover > .overlay{
+    transform: translateY(0%);
+    opacity: 0.5;
+    cursor: pointer;
+}
+.overlay a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font:bold
+}
